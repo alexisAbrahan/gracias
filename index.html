@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>¡Gracias por todo!</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body style="background: #111; color: #ffb7c5; font-family: monospace; text-align: center; padding-top: 50px;">
 
@@ -10,7 +11,9 @@
   <p>Agradecerte por toda la paciencia y la ayuda con las clases!</p>
 
   <br>
-  <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=300" width="220" style="border-radius: 10px; border: 2px dashed #ffb7c5;" alt="Token">
+  <button onclick="confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });" style="background: #ffb7c5; color: #111; border: none; padding: 12px 24px; font-family: monospace; font-weight: bold; border-radius: 8px; cursor: pointer;">
+    🎉 
+  </button>
 
 </body>
 </html>
