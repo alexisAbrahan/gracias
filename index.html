@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>¡Gracias por todo!</title>
+  <!-- Cargamos la librería asegurando compatibilidad -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body style="background: #111; color: #ffb7c5; font-family: monospace; text-align: center; margin: 0; padding: 50px 20px;">
@@ -13,10 +14,20 @@
     <p style="font-size: 15px; line-height: 1.5; margin: 25px 0;">Agradecerte por toda la paciencia y la ayuda con las clases!</p>
 
     <br>
-    <button onclick="confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });" style="background: #ffb7c5; color: #111; border: none; padding: 14px 28px; font-family: monospace; font-weight: bold; font-size: 16px; border-radius: 8px; cursor: pointer; width: 100%;">
+    <button onclick="dispararConfeti()" style="background: #ffb7c5; color: #111; border: none; padding: 14px 28px; font-family: monospace; font-weight: bold; font-size: 16px; border-radius: 8px; cursor: pointer; width: 100%;">
       🎉 
     </button>
   </div>
+
+  <script>
+    function dispararConfeti() {
+      if (typeof confetti === 'function') {
+        confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
+      } else {
+        alert("Cargando efecto... probá de nuevo en un segundo.");
+      }
+    }
+  </script>
 
 </body>
 </html>
